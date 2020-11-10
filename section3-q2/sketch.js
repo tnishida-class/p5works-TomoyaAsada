@@ -12,6 +12,7 @@ function kobeCity(x, y, size){
   noFill();
 
   strokeWeight(size * 0.25);
+  stroke(0,150,0)
   strokeCap(SQUARE);
   arc(x + size * 0.25, y, size, size, QUARTER_PI * 3, QUARTER_PI * 3 + PI);
   // BLANK[1]
