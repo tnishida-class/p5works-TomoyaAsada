@@ -7,11 +7,16 @@ function setup(){
   y = height / 2;
   vx = 8;
   vy = 8;
+  angle = 10;
 }
 
 function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
+  x += 5;
+  y += 0.5;
+  angle += 1;
+  star(x,y,10,angle);
 
   // 端の処理パターン (1) 反対側から出てくる
   if(x > width){ x = 0; }
@@ -25,6 +30,7 @@ function star(cx, cy, r, angle){
   for(var i = 0; i < 20; i++){
     var theta = TWO_PI * i * 2 / 5 - HALF_PI;
     // BLANK[1] (hint: angle 分だけ星を回転させるには？)
+    theta = theta + angle;
     var x = cx + cos(theta) * r;
     var y = cy + sin(theta) * r;
     vertex(x,y);
