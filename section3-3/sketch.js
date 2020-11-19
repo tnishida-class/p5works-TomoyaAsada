@@ -10,6 +10,7 @@ function setup(){
     else{
       console.log(i + "年はうるう年ではありません");
     }
+    console.log(daysInYear(i))
   }
 }
 
@@ -26,6 +27,7 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  return isLeapYear(y) ? 366 : 365;
 }
 
 function daysInMonth(y, m){
